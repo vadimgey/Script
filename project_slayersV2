@@ -1,0 +1,19 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("Project Slayers", "RJTheme3")
+
+local Tab = Window:NewTab("Dungeon Farm")
+
+local Section = Tab:NewSection("Dungeon farm")
+
+Section:NewToggle("Start farm", "start", function(state)
+    if state then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/vadimgey/dungeon-farm/main/project_slayers")))()
+    else
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/vadimgey/dungeon-farm/main/dungeon-farm%20off")))()
+    end
+end)
+
+Section:NewButton("Teleport to Shop", "Teleport", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6587.10693359375, -38.44284439086914, 1879.7611083984375)
+end)
